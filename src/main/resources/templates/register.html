@@ -1,0 +1,32 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Your head content here -->
+</head>
+<body>
+<h2>Player Registration</h2>
+<form th:action="@{/register}" th:object="${playerForm}" method="post">
+    <label>Username:</label>
+    <input type="text" th:field="*{username}" required/>
+
+    <label>Email:</label>
+    <input type="email" th:field="*{email}" required/>
+
+    <label>Date of Birth:</label>
+    <input type="date" th:field="*{dateOfBirth}" required/>
+
+    <label>Gender:</label>
+    <select th:field="*{gender}" required>
+        <option value="MALE">Male</option>
+        <option value="FEMALE">Female</option>
+        <option value="OTHER">Other</option>
+    </select>
+
+    <label>Elo:</label>
+    <input type="number" th:field="*{elo}" required/>
+
+    <button type="submit">Register</button>
+</form>
+</body>
+</html>

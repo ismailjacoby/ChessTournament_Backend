@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome to the Chess Club</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .logo {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: black;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        strong {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="https://www.lawctopus.com/wp-content/uploads/2015/01/image.png.webp" alt="chess-logo">
+    <p>Hello <span th:text="${username}"></span>,</p>
+    <p>Welcome to the Mr. Checkmate's Chess Club!</p>
+    <p>Your password to log in is:<br>
+        <strong th:text="${password}"></strong></p>
+    <p>Best regards,<br/>Mr. Checkmate</p>
+</div>
+</body>
+</html>

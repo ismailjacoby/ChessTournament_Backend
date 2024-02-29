@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Email Notification - Tournament Cancelled</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #cc0000; /* Red color for emphasis */
+        }
+
+        p {
+            color: #555;
+        }
+
+        strong {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="https://www.lawctopus.com/wp-content/uploads/2015/01/image.png.webp" alt="chess-logo">
+
+    <h1>Tournament Cancellation Notification</h1>
+
+    <p>Hello,</p>
+
+    <p>We regret to inform you that the <strong th:text="${name}"></strong></p> tournament in <strong th:text="${location}"></strong></p> you were registered for has been cancelled:</p>
+
+    <p>We apologize for any inconvenience caused. If you have any questions, please contact us.</p>
+
+    <p>Best regards,</p>
+    <p>Mr Checkmate</p>
+
+</div>
+
+</body>
+</html>

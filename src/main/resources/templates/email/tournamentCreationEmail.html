@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Email Notification - Tournament Created</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        strong {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="https://www.lawctopus.com/wp-content/uploads/2015/01/image.png.webp" alt="chess-logo">
+
+    <h1>New Chess Tournament Announcement</h1>
+
+    <p>Hello dear player,</p>
+
+    <p>We are pleased to inform you that a new tournament has been created:</p>
+
+    <p>Tournament Name: <strong th:text="${name}"></strong></p>
+    <p>Location: <strong th:text="${location}"></strong></p>
+    <p>Min Elo: <strong th:text="${minElo}"></strong></p>
+    <p>Min Elo: <strong th:text="${maxElo}"></strong></p>
+    <p>Min Players: <strong th:text="${minPlayers}"></strong></p>
+    <p>Max Players: <strong th:text="${maxPlayers}"></strong></p>
+    <p>Gender: <strong th:text="${gender}"></strong></p>
+    <p>Registration End Date: <strong th:text="${registrationEndDate}"></strong></p>
+
+
+    <p>Please check the tournament details and register if you are interested.</p>
+
+    <p>Best regards,</p>
+    <p>Mr Checkmate</p>
+
+</div>
+
+</body>
+</html>
